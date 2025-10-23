@@ -384,3 +384,6 @@
 * **Memoization**, **batching**, and **context** improve performance and maintainability.
 
 ---
+
+Composition 
+Error Boundaries
