@@ -1,7 +1,6 @@
+# useContext
 
 ---
-
-# useContext – Complete Notes
 
 ## 1. 🎯 Purpose
 
@@ -9,9 +8,9 @@
 
 ### 🧠 Key Uses
 
-* Avoids deeply nested prop passing
-* Centralizes global or shared state
-* Enables cross-component communication
+- Avoids deeply nested prop passing
+- Centralizes global or shared state
+- Enables cross-component communication
 
 > 💡 Ideal for themes, authentication, language, and app-wide state.
 
@@ -58,7 +57,7 @@ const ThemeContext = React.createContext();
 ```jsx
 function App() {
   const [theme, setTheme] = useState('light');
-  
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <Header />
@@ -75,12 +74,10 @@ function App() {
 ```jsx
 function Header() {
   const { theme, setTheme } = useContext(ThemeContext);
-  
+
   return (
     <header className={theme}>
-      <button onClick={() => setTheme('dark')}>
-        Toggle Theme
-      </button>
+      <button onClick={() => setTheme('dark')}>Toggle Theme</button>
     </header>
   );
 }
@@ -159,17 +156,15 @@ function Component() {
 ```jsx
 function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('light');
-  
+
   const value = {
     theme,
     toggleTheme: () =>
-      setTheme(prev => (prev === 'light' ? 'dark' : 'light'))
+      setTheme((prev) => (prev === 'light' ? 'dark' : 'light')),
   };
-  
+
   return (
-    <ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 }
 ```
@@ -181,7 +176,7 @@ function ThemeProvider({ children }) {
 ```jsx
 const ThemeContext = React.createContext({
   theme: 'light',
-  toggleTheme: () => {}
+  toggleTheme: () => {},
 });
 // Used if no Provider exists in component tree
 ```
@@ -231,7 +226,7 @@ const value = useContext(ThemeContext);
 // ✅ Wrap with Provider
 <ThemeContext.Provider value={actualValue}>
   <Component />
-</ThemeContext.Provider>
+</ThemeContext.Provider>;
 ```
 
 ---
@@ -271,9 +266,9 @@ const contextValue = useMemo(() => ({ data, setData }), [data]);
 
 ❌ **Don’ts**
 
-* Avoid a “mega context” for everything
-* Don’t skip wrapping consumers with providers
-* Don’t create new value objects inline each render
+- Avoid a “mega context” for everything
+- Don’t skip wrapping consumers with providers
+- Don’t create new value objects inline each render
 
 ---
 
@@ -297,11 +292,11 @@ function useTheme() {
 
 ## 10. 🎯 Key Takeaways
 
-* 🧭 **Solves prop drilling** — share state globally
-* ⚙️ **Provider / Consumer pattern** — wrap and consume
-* 🚀 **Optimize performance** — memoize context values
-* 🧩 **Use multiple contexts** — avoid overloading one
-* 🔧 **Provide defaults** — prevent runtime errors
+- 🧭 **Solves prop drilling** — share state globally
+- ⚙️ **Provider / Consumer pattern** — wrap and consume
+- 🚀 **Optimize performance** — memoize context values
+- 🧩 **Use multiple contexts** — avoid overloading one
+- 🔧 **Provide defaults** — prevent runtime errors
 
 ---
 

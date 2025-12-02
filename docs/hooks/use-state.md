@@ -1,7 +1,6 @@
+# useState
 
 ---
-
-# useState - Complete Notes
 
 ## 1. 📝 Syntax & Basics
 
@@ -9,9 +8,9 @@
 const [state, setState] = useState(initialValue);
 ```
 
-* **Returns** → `[currentValue, updaterFunction]`
-* **Initial render** → uses `initialValue`
-* **Subsequent renders** → uses latest state
+- **Returns** → `[currentValue, updaterFunction]`
+- **Initial render** → uses `initialValue`
+- **Subsequent renders** → uses latest state
 
 ---
 
@@ -46,16 +45,16 @@ setIsVisible(true);
 ### ⚡ **Functional Update** (Recommended)
 
 ```jsx
-setCount(prev => prev + 1);
-setItems(prev => [...prev, newItem]);
+setCount((prev) => prev + 1);
+setItems((prev) => [...prev, newItem]);
 ```
 
 > 💡 **Use functional updates when:**
 >
-> * Multiple state updates occur in sequence
-> * Async operations depend on previous state
-> * Batch updates are needed
-> * New state depends on previous state
+> - Multiple state updates occur in sequence
+> - Async operations depend on previous state
+> - Batch updates are needed
+> - New state depends on previous state
 
 ---
 
@@ -80,12 +79,12 @@ const [isOpen, setIsOpen] = useState(false);
 const [user, setUser] = useState({ name: 'John', age: 30 });
 
 // Update
-setUser(prev => ({ ...prev, age: 31 }));
+setUser((prev) => ({ ...prev, age: 31 }));
 
 // Nested object
-setUser(prev => ({
+setUser((prev) => ({
   ...prev,
-  profile: { ...prev.profile, city: 'NYC' }
+  profile: { ...prev.profile, city: 'NYC' },
 }));
 ```
 
@@ -95,15 +94,13 @@ setUser(prev => ({
 const [items, setItems] = useState(['a', 'b']);
 
 // Add
-setItems(prev => [...prev, 'c']);
+setItems((prev) => [...prev, 'c']);
 
 // Remove
-setItems(prev => prev.filter(item => item !== 'b'));
+setItems((prev) => prev.filter((item) => item !== 'b'));
 
 // Update
-setItems(prev => prev.map(item =>
-  item === 'a' ? 'updated' : item
-));
+setItems((prev) => prev.map((item) => (item === 'a' ? 'updated' : item)));
 ```
 
 ---
@@ -119,7 +116,7 @@ state.items.push(newItem);
 
 // ✅ CORRECT
 setCount(5);
-setItems(prev => [...prev, newItem]);
+setItems((prev) => [...prev, newItem]);
 ```
 
 ### ⏳ **2. State Updates Are Asynchronous**
@@ -131,8 +128,8 @@ setCount(count + 1);
 console.log(count); // still old value
 
 // ✅ Use functional updates for consecutive changes
-setCount(prev => prev + 1);
-setCount(prev => prev + 1);
+setCount((prev) => prev + 1);
+setCount((prev) => prev + 1);
 ```
 
 ### 🧩 **3. Object/Array Updates Need New References**
@@ -164,7 +161,7 @@ const [data, setData] = useState(() => {
 ```jsx
 // ✅ Single re-render in most cases
 const handleClick = () => {
-  setCount(c => c + 1);
+  setCount((c) => c + 1);
   setName('John');
   setActive(true);
 };
@@ -178,7 +175,7 @@ const handleClick = () => {
 
 ```jsx
 const [isOn, setIsOn] = useState(false);
-const toggle = () => setIsOn(prev => !prev);
+const toggle = () => setIsOn((prev) => !prev);
 ```
 
 ### 📝 **Form State**
@@ -187,7 +184,7 @@ const toggle = () => setIsOn(prev => !prev);
 const [form, setForm] = useState({ email: '', password: '' });
 
 const updateField = (field, value) => {
-  setForm(prev => ({ ...prev, [field]: value }));
+  setForm((prev) => ({ ...prev, [field]: value }));
 };
 ```
 
@@ -203,7 +200,7 @@ const [data, setData] = useState(null);
 const [state, setState] = useState({
   loading: false,
   error: null,
-  data: null
+  data: null,
 });
 ```
 
@@ -221,21 +218,20 @@ const [state, setState] = useState({
 
 ## 9. ✅ Best Practices
 
-* Use **multiple `useState` hooks** for unrelated data
-* Group **related fields** in objects
-* Prefer **functional updates**
-* Use **lazy initializers** for expensive computations
-* Keep state **minimal**; compute derived data via `useMemo`
+- Use **multiple `useState` hooks** for unrelated data
+- Group **related fields** in objects
+- Prefer **functional updates**
+- Use **lazy initializers** for expensive computations
+- Keep state **minimal**; compute derived data via `useMemo`
 
 ---
 
 ## 10. 💡 Key Takeaways
 
-* **State updates are async** — don’t rely on immediate values
-* **Always create new references** for objects/arrays
-* **Functional updates** prevent stale state
-* **Initializer functions** run only once
-* **Batching** optimizes multiple updates
+- **State updates are async** — don’t rely on immediate values
+- **Always create new references** for objects/arrays
+- **Functional updates** prevent stale state
+- **Initializer functions** run only once
+- **Batching** optimizes multiple updates
 
 ---
-

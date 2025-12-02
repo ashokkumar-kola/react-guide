@@ -1,20 +1,19 @@
+# useEffect
 
 ---
-
-# useEffect - Complete Notes
 
 ## 1. 🎯 Purpose
 
 **Manages side effects** in React components such as:
 
-* 🌐 Data fetching
-* 🔔 Subscriptions
-* ⏱️ Timers
-* 🧩 DOM manipulation
-* 🔧 API calls
+- 🌐 Data fetching
+- 🔔 Subscriptions
+- ⏱️ Timers
+- 🧩 DOM manipulation
+- 🔧 API calls
 
 > 💡 **Definition:**
-> A *side effect* is any operation that affects something outside the component’s render (like network requests, subscriptions, or DOM changes).
+> A _side effect_ is any operation that affects something outside the component’s render (like network requests, subscriptions, or DOM changes).
 
 ---
 
@@ -30,9 +29,9 @@ useEffect(() => {
 }, [dependencies]);
 ```
 
-* **First argument** → Effect callback
-* **Return function** → Cleanup (optional)
-* **Dependency array** → Controls execution frequency
+- **First argument** → Effect callback
+- **Return function** → Cleanup (optional)
+- **Dependency array** → Controls execution frequency
 
 ---
 
@@ -93,7 +92,7 @@ useEffect(() => {
 
 ```jsx
 useEffect(() => {
-  const subscription = API.subscribe(data => setData(data));
+  const subscription = API.subscribe((data) => setData(data));
 
   return () => subscription.unsubscribe();
 }, []);
@@ -161,7 +160,7 @@ useEffect(() => {
 // ✅ Correct: use functional updates or deps
 useEffect(() => {
   const id = setInterval(() => {
-    setCount(prev => prev + 1);
+    setCount((prev) => prev + 1);
   }, 1000);
   return () => clearInterval(id);
 }, []);
@@ -230,27 +229,27 @@ useEffect(() => {
 
 ✅ **Do’s**
 
-* Declare dependencies **honestly** — trust ESLint
-* **Separate concerns** with multiple effects
-* Always **cleanup** listeners, timers, and subscriptions
-* Use empty array only for **mount/unmount** behavior
-* Extract repeated logic into **custom hooks**
+- Declare dependencies **honestly** — trust ESLint
+- **Separate concerns** with multiple effects
+- Always **cleanup** listeners, timers, and subscriptions
+- Use empty array only for **mount/unmount** behavior
+- Extract repeated logic into **custom hooks**
 
 ❌ **Don’ts**
 
-* Don’t skip dependencies to “fix” warnings
-* Don’t mix unrelated logic inside one effect
-* Don’t cause **state updates** without dependency awareness
+- Don’t skip dependencies to “fix” warnings
+- Don’t mix unrelated logic inside one effect
+- Don’t cause **state updates** without dependency awareness
 
 ---
 
 ## 9. 🎯 Key Takeaways
 
-* **Dependency array** → Controls when the effect runs
-* **Cleanup function** → Prevents memory leaks
-* **Multiple effects** → Improve maintainability
-* **Include all dependencies** → Avoid stale data
-* **Empty array** → `componentDidMount` + cleanup behavior
+- **Dependency array** → Controls when the effect runs
+- **Cleanup function** → Prevents memory leaks
+- **Multiple effects** → Improve maintainability
+- **Include all dependencies** → Avoid stale data
+- **Empty array** → `componentDidMount` + cleanup behavior
 
 ---
 
