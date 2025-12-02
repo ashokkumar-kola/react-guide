@@ -1,0 +1,3 @@
+# Import
+
+import 'bootstrap/dist/css/bootstrap.css'

@@ -1,4 +1,3 @@
-
 # 🧩 React Setup Notes
 
 ### 🚀 Create React App (with Vite)
@@ -60,7 +59,7 @@ You can also test React directly in browser:
 
 ### 📚 Official Docs
 
-* React Docs → [https://react.dev](https://react.dev)
-* Vite Docs → [https://vite.dev](https://vite.dev/guide)
+- React Docs → [https://react.dev](https://react.dev)
+- Vite Docs → [https://vite.dev](https://vite.dev/guide)
 
 ---
