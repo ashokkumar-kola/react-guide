@@ -107,24 +107,20 @@ JSX uses objects for the `style` attribute:
 <div style={{ color: 'blue', fontSize: '20px' }}></div>
 ```
 
-````
-
 ---
 
-# ✅ 4. `jsx-basics/children-in-jsx.md`
+## ✅ Children in JSX
 
-```markdown
-# Children in JSX
-
-JSX can contain nested elements, components, or dynamic content.
+- JSX can contain nested elements, components, or dynamic content.
 
 ## Basic Nesting
+
 ```jsx
 <div>
   <h1>Hello</h1>
   <p>World</p>
 </div>
-````
+```
 
 ## Passing Children to Components
 
@@ -158,55 +154,44 @@ Use `.map()` and include a `key`:
 }
 ```
 
-````
-
 ---
 
-# ✅ 5. `jsx-basics/jsx-vs-html.md`
+## ✅ JSX vs HTML
 
-```markdown
-# JSX vs HTML
+- JSX looks like HTML but has key differences.
 
-JSX looks like HTML but has key differences.
+### 1. JSX Requires a Single Root Element
 
----
-
-## 1. JSX Requires a Single Root Element
 HTML allows multiple. JSX does not.
+
 ```jsx
 <>
   <h1>Hello</h1>
   <p>World</p>
 </>
-````
+```
 
----
+### 2. Attributes Use camelCase
 
-## 2. Attributes Use camelCase
-
+```
 - `class` → `className`
 - `for` → `htmlFor`
 - `onclick` → `onClick`
+```
 
----
-
-## 3. JavaScript Values Use {}
+### 3. JavaScript Values Use {}
 
 ```jsx
 <h1>{title}</h1>
 ```
 
----
-
-## 4. Inline Styles Use Objects
+### 4. Inline Styles Use Objects
 
 ```jsx
 <div style={{ color: 'red' }}></div>
 ```
 
----
-
-## 5. Self-Closing Tags
+### 5. Self-Closing Tags
 
 JSX requires explicit closing:
 
@@ -215,9 +200,7 @@ JSX requires explicit closing:
 <img />
 ```
 
----
-
-## 6. Comments
+### 6. Comments
 
 ```jsx
 {
@@ -225,7 +208,4 @@ JSX requires explicit closing:
 }
 ```
 
-```
-
 ---
-```

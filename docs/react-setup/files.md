@@ -5,7 +5,7 @@ Best practices, extra notes, and key details developers should know.
 
 ---
 
-## .env
+## 📝 .env
 
 Environment variables for API keys and configuration.
 
@@ -15,14 +15,14 @@ Environment variables for API keys and configuration.
 
 ---
 
-## .env.example
+## 📝 .env.example
 
 Template showing required environment variables.  
 Useful for onboarding and CI.
 
 ---
 
-## .gitignore
+## 📝 .gitignore
 
 Files excluded from Git:
 
@@ -36,7 +36,7 @@ Best practice: keep `.env*` patterns included.
 
 ---
 
-## vite.config.js
+## 📝 vite.config.js
 
 Vite configuration file.  
 Used for:
@@ -53,7 +53,7 @@ Example:
 
 ---
 
-## package.json
+## 📝 package.json
 
 Project metadata and settings.  
 Includes:
@@ -71,7 +71,7 @@ Key sections:
 
 ---
 
-## package-lock.json
+## 📝 package-lock.json
 
 Generated automatically.  
 Ensures consistent dependency versions across machines.  
@@ -79,7 +79,7 @@ Should not be edited manually.
 
 ---
 
-## index.html
+## 📝 index.html
 
 Project’s HTML entry.  
 Contains:
@@ -94,7 +94,7 @@ Important:
 
 ---
 
-## eslint
+## 📝 eslint
 
 Linting config to ensure consistent code style.  
 May include:
@@ -108,7 +108,7 @@ Often paired with Prettier.
 
 ---
 
-## jsconfig.json / tsconfig.json
+## 📝 jsconfig.json / tsconfig.json
 
 (Optional but common)  
 Used for path aliases and editor IntelliSense.  
@@ -118,7 +118,7 @@ Important when enabling shortcuts like `@/components`.
 
 # Public Folder
 
-## public/
+## 🗂️ public/
 
 Static assets served directly without processing.  
 Files here are copied to the root of the production build.  
@@ -135,11 +135,11 @@ Use `/public` rarely unless necessary; prefer `/src/assets`.
 
 # Source Folder (src)
 
-## src/
+## 🗂️ src/
 
 Main application code.
 
-### main.jsx
+### 📝 main.jsx
 
 Entry point of the React app.
 
@@ -147,7 +147,7 @@ Entry point of the React app.
 - Renders `<App />` into root div
 - Often includes global providers (Router, Redux, QueryClient)
 
-### App.jsx
+### 📝 App.jsx
 
 Main UI component.  
 Can include:
@@ -156,16 +156,16 @@ Can include:
 - layout structure
 - global wrappers (theme, context)
 
-### index.css
+### 📝 index.css
 
 Global CSS for resets, variables, utility styles.
 
-### assets/
+### 🗂️ assets/
 
 Images, fonts, SVGs, and media used in components.  
 Vite fingerprinting automatically hashes file names.
 
-### App.css
+### 📝 App.css
 
 Styles specific to the App component.  
 Can be replaced by CSS modules or styled-components.
@@ -174,31 +174,31 @@ Can be replaced by CSS modules or styled-components.
 
 # Additional Recommended Folders
 
-### components/
+### 🗂️ components/
 
 Reusable UI components.
 
-### pages/
+### 🗂️ pages/
 
 Page-level components, often used with React Router.
 
-### hooks/
+### 🗂️ hooks/
 
 Custom hooks for business logic.
 
-### utils/
+### 🗂️ utils/
 
 Helper functions and constants.
 
-### services/
+### 🗂️ services/
 
 API calls and network-related logic.
 
-### context/
+### 🗂️ context/
 
 React Context providers.
 
-### styles/
+### 🗂️ styles/
 
 Global theme files, variables, SCSS, or utility CSS.
 

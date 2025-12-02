@@ -1,4 +1,3 @@
-
 ---
 
 # 🧭 Project Conventions
@@ -62,7 +61,7 @@ src/components/
 | **Imports**     | Group by type (React, libs, local)  | `import React from 'react';`<br>`import { useState } from 'react';`<br>`import './App.css';` |
 | **Quotes**      | Use single quotes `'` in JS/JSX     | `'Hello'`                                                                                    |
 | **Semicolons**  | Required                            | `const x = 10;`                                                                              |
-| **Indentation** | 2 spaces                            | ✅ consistent spacing                                                                         |
+| **Indentation** | 2 spaces                            | ✅ consistent spacing                                                                        |
 | **JSX props**   | One per line if many                | `<Button label="Save" disabled onClick={handleSave} />`                                      |
 | **Functions**   | Arrow functions for inline handlers | `onClick={() => doSomething()}`                                                              |
 
@@ -72,10 +71,10 @@ Use **Prettier** for auto-formatting.
 
 ## 🧠 State & Props
 
-* Keep components **pure** (no side effects in render).
-* Use **hooks** (`useState`, `useEffect`, `useContext`, etc.) for state and lifecycle.
-* Prefer **lifting state up** instead of prop-drilling too deep.
-* Extract reusable logic into **custom hooks** in `/src/hooks`.
+- Keep components **pure** (no side effects in render).
+- Use **hooks** (`useState`, `useEffect`, `useContext`, etc.) for state and lifecycle.
+- Prefer **lifting state up** instead of prop-drilling too deep.
+- Extract reusable logic into **custom hooks** in `/src/hooks`.
 
 ---
 
@@ -182,6 +181,7 @@ npm run test
 
 ## ✅ Summary
 
+```
 ✔️ Clean folder structure
 ✔️ Consistent naming
 ✔️ Functional components + hooks
@@ -189,6 +189,6 @@ npm run test
 ✔️ Conventional commits
 ✔️ Tests close to components
 ✔️ Docs inside `/docs` folder
+```
 
 ---
-

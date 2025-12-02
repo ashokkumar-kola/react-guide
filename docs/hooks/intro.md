@@ -1,26 +1,41 @@
-
+# React Hooks - High Level Notes
 
 ---
 
-# React Hooks - High Level Notes
-
 ## 1. 📋 Hook Categories
 
-### 🔹 **Basic Hooks**
+### 🔹 State Hooks
 
-1. `useState` — **State management**
-2. `useEffect` — **Side effects**
-3. `useContext` — **Context consumption**
+- `useState` — **Local state management**
+- `useReducer` — **Complex state logic / reducers**
 
-### 🔹 **Additional Hooks**
+### 🔹 Effect Hooks
 
-4. `useReducer` — **Complex state**
-5. `useMemo` — **Expensive calculations**
-6. `useCallback` — **Function optimization**
-7. `useRef` — **DOM references**
-8. `useImperativeHandle` — **Custom ref behavior**
-9. `useLayoutEffect` — **Synchronous effects**
-10. `useDebugValue` — **Debugging**
+- `useEffect` — **Side effects after render**
+- `useLayoutEffect` — **Synchronous effects before paint**
+- `useInsertionEffect` — **CSS / library-specific effect before DOM mutations**
+
+### 🔹 Context Hook
+
+- `useContext` — **Consume React context**
+
+### 🔹 Ref Hooks
+
+- `useRef` — **Mutable refs / DOM references**
+- `useImperativeHandle` — **Custom ref behavior**
+
+### 🔹 Performance / Optimization Hooks
+
+- `useMemo` — **Memoize expensive calculations**
+- `useCallback` — **Memoize functions**
+- `useTransition` — **Mark state updates as non-urgent**
+- `useDeferredValue` — **Defer updating non-critical UI**
+
+### 🔹 Other / Utility Hooks
+
+- `useId` — **Generate unique IDs**
+- `useSyncExternalStore` — **Subscribe to external stores**
+- `useDebugValue` — **Debug custom hooks in DevTools**
 
 ---
 
@@ -46,6 +61,7 @@
 ### 🔑 **Two Main Rules**
 
 1. **Only call hooks at the top level**
+
    > ❌ Not in loops, conditions, or nested functions
 
 2. **Only call from React functions**
@@ -53,8 +69,8 @@
 
 ### 💡 **Why these rules?**
 
-* React relies on **consistent hook call order**
-* Ensures **predictable behavior** across renders
+- React relies on **consistent hook call order**
+- Ensures **predictable behavior** across renders
 
 ---
 
@@ -74,31 +90,31 @@
 
 ### 🧩 **State Management**
 
-* State updates are **asynchronous**
-* Use **functional updates** for consecutive state changes
-* State hooks trigger **re-renders**
-* Objects/arrays need **new references**
+- State updates are **asynchronous**
+- Use **functional updates** for consecutive state changes
+- State hooks trigger **re-renders**
+- Objects/arrays need **new references**
 
 ### 🌐 **Effects & Side Effects**
 
-* Runs **after render**
-* **Cleanup** prevents memory leaks
-* **Dependency array** controls execution
-* `[]` → mount/unmount only
+- Runs **after render**
+- **Cleanup** prevents memory leaks
+- **Dependency array** controls execution
+- `[]` → mount/unmount only
 
 ### ⚡ **Performance**
 
-* `useMemo` caches **values**
-* `useCallback` caches **functions**
-* Prevents **unnecessary re-renders**
-* Use when passing callbacks to optimized children
+- `useMemo` caches **values**
+- `useCallback` caches **functions**
+- Prevents **unnecessary re-renders**
+- Use when passing callbacks to optimized children
 
 ### 🧭 **References**
 
-* `useRef` doesn’t trigger re-renders
-* Persists across re-renders
-* Stores **mutable values**
-* Access **DOM elements directly**
+- `useRef` doesn’t trigger re-renders
+- Persists across re-renders
+- Stores **mutable values**
+- Access **DOM elements directly**
 
 ---
 
@@ -106,21 +122,21 @@
 
 ### 🐛 **Stale Closures**
 
-* Functions capture old render values
-* Use **functional updates** for state
-* Always include dependencies in effects
+- Functions capture old render values
+- Use **functional updates** for state
+- Always include dependencies in effects
 
 ### 🔁 **Infinite Loops**
 
-* State updates inside effects without proper deps
-* Objects in dependency arrays
-* Missing **cleanup functions**
+- State updates inside effects without proper deps
+- Objects in dependency arrays
+- Missing **cleanup functions**
 
 ### 💧 **Memory Leaks**
 
-* Missing cleanup for **subscriptions**
-* Async ops after **unmount**
-* Forgotten **event listener removal**
+- Missing cleanup for **subscriptions**
+- Async ops after **unmount**
+- Forgotten **event listener removal**
 
 ---
 
@@ -148,7 +164,7 @@
 | -------------------- | ------------- |
 | Heavy computations   | `useMemo`     |
 | Stable callbacks     | `useCallback` |
-| Use only when needed | ✅             |
+| Use only when needed | ✅            |
 
 ---
 
@@ -156,22 +172,22 @@
 
 ### 📊 **Dependency Arrays**
 
-* Include **all values** used in effect
-* `[]` → run on mount/unmount only
-* No array → run **every render**
+- Include **all values** used in effect
+- `[]` → run on mount/unmount only
+- No array → run **every render**
 
 ### 🧩 **Custom Hooks**
 
-* Extract **reusable logic**
-* Name must start with **"use"**
-* Can call **other hooks**
+- Extract **reusable logic**
+- Name must start with **"use"**
+- Can call **other hooks**
 
 ### 🧱 **Organization**
 
-* Group related hooks logically
+- Group related hooks logically
+  - State → Effects → Context → Refs
 
-  * State → Effects → Context → Refs
-* Place **custom hooks** at top or bottom
+- Place **custom hooks** at top or bottom
 
 ---
 
@@ -179,15 +195,15 @@
 
 ### 🧪 **Debugging**
 
-* Use **React DevTools**
-* `useDebugValue` for custom hooks
-* Check **hook order consistency**
+- Use **React DevTools**
+- `useDebugValue` for custom hooks
+- Check **hook order consistency**
 
 ### 🧷 **Testing**
 
-* Test custom hooks via **components**
-* Mock effects carefully
-* Verify **cleanup behavior**
+- Test custom hooks via **components**
+- Mock effects carefully
+- Verify **cleanup behavior**
 
 ---
 

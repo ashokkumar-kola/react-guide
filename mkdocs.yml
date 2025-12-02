@@ -6,7 +6,7 @@ nav:
   - React Steup:
       - Requirements: react-setup/requirements.md
       # - Installation: react-setup/installation.md
-      - Start: react-setup/start.md
+      - Start / Create: react-setup/start.md
 
       - Folder Structure: react-setup/folder-structure.md
       - Files: react-setup/files.md
@@ -25,65 +25,108 @@ nav:
       # - Children in JSX: jsx-basics/children-in-jsx.md
       # - JSX vs HTML: jsx-basics/jsx-vs-html.md
 
-  - Components and Props:
-      # - Function Components: components-and-props/function-components.md
-      # - Class Components: components-and-props/class-components.md
-      # - Props Overview: components-and-props/props-overview.md
-      # - Passing Props: components-and-props/passing-props.md
-      # - Default Props: components-and-props/default-props.md
-      # - Prop Types: components-and-props/prop-types.md
-      # - State and Lifecycle: components-and-props/state-and-lifecycle.md
-      # - Handling Events: components-and-props/handling-events.md
-      # - Conditional Rendering: components-and-props/conditional-rendering.md
-      # - Lists and Keys: components-and-props/lists-and-keys.md
-      # - Forms in React: components-and-props/forms-in-react.md
-      # - Lifting State Up: components-and-props/lifting-state-up.md
-      # - Composition vs Inheritance: components-and-props/composition-vs-inheritance.md
-      # - Thinking in React: components-and-props/thinking-in-react.md
+  # - Components and Props:
+  #     # - Function Components: components-and-props/function-components.md
+  #     # - Class Components: components-and-props/class-components.md
+  #     # - Props Overview: components-and-props/props-overview.md
+  #     # - Passing Props: components-and-props/passing-props.md
+  #     # - Default Props: components-and-props/default-props.md
+  #     # - Prop Types: components-and-props/prop-types.md
+  #     # - State and Lifecycle: components-and-props/state-and-lifecycle.md
+  #     # - Handling Events: components-and-props/handling-events.md
+  #     # - Conditional Rendering: components-and-props/conditional-rendering.md
+  #     # - Lists and Keys: components-and-props/lists-and-keys.md
+  #     # - Forms in React: components-and-props/forms-in-react.md
+  #     # - Lifting State Up: components-and-props/lifting-state-up.md
+  #     # - Composition vs Inheritance: components-and-props/composition-vs-inheritance.md
+  #     # - Thinking in React: components-and-props/thinking-in-react.md
+  - React:
+      - Introduction to React: react/intro.md
+      # - React Architecture: react/architecture.md
+      # - Virtual DOM: react/virtual-dom.md
+      # - React Rendering Process: react/rendering-process.md
+      # - React Fiber: react/react-fiber.md
+      # - JSX Overview: react/jsx-overview.md
+      # - Components Overview: react/components-overview.md
+      # - Props and State: react/props-and-state.md
+      # - Event Handling in React: react/event-handling.md
+      # - React Lifecycle Methods: react/lifecycle-methods.md
 
-  - Hoooks:
-      # - Introduction to Hooks: hooks/introduction.md
-      # - useState Hook: hooks/use-state.md
-      # - useEffect Hook: hooks/use-effect.md
-      # - useContext Hook: hooks/use-context.md
-      # - useReducer Hook: hooks/use-reducer.md
-      # - useRef Hook: hooks/use-ref.md
-      # - Custom Hooks: hooks/custom-hooks.md
-      # - Rules of Hooks: hooks/rules-of-hooks.md
+      - Basics: react/basics.md
+      - Advanced Concepts: react/advanced.md
+      # - Best Practices: react/best-practices.md
+      - Cheat Sheet: react/cheat-sheet.md
+    # - Common Pitfalls: react/common-pitfalls.md
+    # - Performance Optimization: react/performance-optimization.md
+    # - Testing in React: react/testing-in-react.md
+    # - Deployment Strategies: react/deployment-strategies.md
 
-  - State Management:
-      # - Introduction to State Management: state-management/introduction.md
-      # - Using Context API: state-management/context-api.md
-      # - Redux Basics: state-management/redux-basics.md
-      # - MobX Overview: state-management/mobx-overview.md
-      # - State Management Libraries Comparison: state-management/libraries-comparison.md
+  - Hooks:
+      - Introduction to Hooks: hooks/intro.md
 
-  - Routing in React:
-      # - React Router Introduction: routing-in-react/react-router-introduction.md
-      # - Setting Up Routes: routing-in-react/setting-up-routes.md
-      # - Nested Routes: routing-in-react/nested-routes.md
-      # - Navigation Links: routing-in-react/navigation-links.md
-      # - Route Parameters: routing-in-react/route-parameters.md
-      # - Redirects and Navigation: routing-in-react/redirects-and-navigation.md
-      # - Programmatic Navigation: routing-in-react/programmatic-navigation.md
-      # - Route Guards: routing-in-react/route-guards.md
-      # - Integrating with Redux: routing-in-react/integrating-with-redux.md
+      ## State Hooks
+      - useState: hooks/use-state.md
+      - useReducer: hooks/use-reducer.md
 
-  - Advanced Topics:
-      # - Higher-Order Components: advanced-topics/higher-order-components.md
-      # - Render Props: advanced-topics/render-props.md
-      # - React Hooks Overview: advanced-topics/react-hooks-overview.md
-      # - Custom Hooks: advanced-topics/custom-hooks.md
-      # - Performance Optimization: advanced-topics/performance-optimization.md
-      # - Server-Side Rendering: advanced-topics/server-side-rendering.md
-      # - React and TypeScript: advanced-topics/react-and-typescript.md
-      # - Testing in React: advanced-topics/testing-in-react.md
-      # - Deployment Strategies: advanced-topics/deployment-strategies.md
+      ## Context Hooks
+      - useContext: hooks/use-context.md
 
-  - Resources:
-      # - Official Documentation: resources/official-documentation.md
-      # - Tutorials and Courses: resources/tutorials-and-courses.md
-      # - Community and Forums: resources/community-and-forums.md
+      ## Ref Hooks
+      - useRef: hooks/use-ref.md
+      - useImperativeHandle: hooks/use-imperative-handle.md
+
+      ## Effect Hooks
+      - useEffect: hooks/use-effect.md
+      - useLayoutEffect: hooks/use-layout-effect.md
+      - useInsertionEffect: hooks/use-insertion-effect.md
+
+      ## Performance / Optimization Hooks
+      - useMemo: hooks/use-memo.md
+      - useCallback: hooks/use-callback.md
+      - useTransition: hooks/use-transition.md
+      - useDeferredValue: hooks/use-deferred-value.md
+
+      ## Other / Advanced Hooks
+      - useId: hooks/use-id.md
+      - useSyncExternalStore: hooks/use-sync-external-store.md
+      - useDebugValue: hooks/use-debug-value.md
+
+      - Custom Hooks: hooks/custom-hooks.md
+      - Rules of Hooks: hooks/rules-of-hooks.md
+
+  # - State Management:
+  #     # - Introduction to State Management: state-management/introduction.md
+  #     # - Using Context API: state-management/context-api.md
+  #     # - Redux Basics: state-management/redux-basics.md
+  #     # - MobX Overview: state-management/mobx-overview.md
+  #     # - State Management Libraries Comparison: state-management/libraries-comparison.md
+
+  # - Routing in React:
+  #     # - React Router Introduction: routing-in-react/react-router-introduction.md
+  #     # - Setting Up Routes: routing-in-react/setting-up-routes.md
+  #     # - Nested Routes: routing-in-react/nested-routes.md
+  #     # - Navigation Links: routing-in-react/navigation-links.md
+  #     # - Route Parameters: routing-in-react/route-parameters.md
+  #     # - Redirects and Navigation: routing-in-react/redirects-and-navigation.md
+  #     # - Programmatic Navigation: routing-in-react/programmatic-navigation.md
+  #     # - Route Guards: routing-in-react/route-guards.md
+  #     # - Integrating with Redux: routing-in-react/integrating-with-redux.md
+
+  # - Advanced Topics:
+  #     # - Higher-Order Components: advanced-topics/higher-order-components.md
+  #     # - Render Props: advanced-topics/render-props.md
+  #     # - React Hooks Overview: advanced-topics/react-hooks-overview.md
+  #     # - Custom Hooks: advanced-topics/custom-hooks.md
+  #     # - Performance Optimization: advanced-topics/performance-optimization.md
+  #     # - Server-Side Rendering: advanced-topics/server-side-rendering.md
+  #     # - React and TypeScript: advanced-topics/react-and-typescript.md
+  #     # - Testing in React: advanced-topics/testing-in-react.md
+  #     # - Deployment Strategies: advanced-topics/deployment-strategies.md
+
+  # - Resources:
+  #     # - Official Documentation: resources/official-documentation.md
+  #     # - Tutorials and Courses: resources/tutorials-and-courses.md
+  #     # - Community and Forums: resources/community-and-forums.md
 
 markdown_extensions:
   - codehilite

@@ -1,6 +1,6 @@
-
 # 📁 React + Vite Folder Structure
 
+```
 my-react-app/
 │
 ├── 📄 index.html                 # Entry HTML file (Vite injects React here)
@@ -55,3 +55,4 @@ my-react-app/
     ├── react-setup.md            # Setup notes (commands, alternatives)
     ├── project-structure.md      # This file (folder structure)
     └── conventions.md            # Optional: naming / commit / code style
+```

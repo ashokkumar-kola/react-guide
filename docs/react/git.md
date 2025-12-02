@@ -62,9 +62,3 @@ git push
 ```bash
 
 ```
-
-    <!-- Simple Line Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
-
-
-    <!-- Font Awesome Icons -->

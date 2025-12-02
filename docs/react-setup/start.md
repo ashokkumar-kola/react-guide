@@ -1,4 +1,4 @@
-# 🧩 React Setup Notes
+# 🧩 Start React App
 
 ### 🚀 Create React App (with Vite)
 
