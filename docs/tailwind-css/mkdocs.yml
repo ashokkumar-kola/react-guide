@@ -1,0 +1,192 @@
+site_name: Tailwind CSS Guide
+site_url: https://your-site-url.com
+repo_name: your-repo
+repo_url: https://github.com/your/repo
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: teal
+    - scheme: slate
+      primary: indigo
+      accent: teal
+  font:
+    text: Inter
+    code: Fira Code
+
+extra_css:
+  - stylesheets/tailwind.css
+  - stylesheets/custom.css
+
+extra_javascript:
+  - javascripts/tailwind-runtime.js
+
+nav:
+  - Home: index.md
+
+  - Introduction:
+      - What is Tailwind CSS?: introduction/what-is-tailwind.md
+      - Why Utility-First?: introduction/why-utility-first.md
+      - Comparison with Traditional CSS: introduction/comparison.md
+
+  - Installation & Setup:
+      - Installation: installation/installation.md
+      - Tailwind Config: installation/config.md
+      - PostCSS & PurgeCSS: installation/postcss-purgecss.md
+      - Common Pitfalls: installation/pitfalls.md
+
+  - Extensions:
+      - VSCode Extensions: extensions/vscode-extensions.md
+      - Plugins: extensions/plugins.md
+      - Third-Party Libraries: extensions/third-party-libraries.md
+      - Framework Integration: extensions/framework-integration.md
+
+  - Core Concepts:
+      - Utility Classes: core-concepts/utility-classes.md
+      - Responsive Design: core-concepts/responsive-design.md
+      - Variants: core-concepts/variants.md
+      - Dark Mode: core-concepts/dark-mode.md
+
+  - Layout & Spacing:
+      - Flexbox & Grid: layout-spacing/flexbox-grid.md
+      - Spacing Utilities: layout-spacing/spacing.md
+      - Container Widths: layout-spacing/container-widths.md
+
+  - Typography & Colors:
+      - Typography: typography-colors/typography.md
+      - Text Utilities: typography-colors/text-utilities.md
+      - Color Palette: typography-colors/color-palette.md
+      - Gradients & Backgrounds: typography-colors/gradients-backgrounds.md
+
+  - Components & Patterns:
+      - Building Components: components-patterns/building-components.md
+      - Reusable Patterns: components-patterns/reusable-patterns.md
+      - Using @apply Directive: components-patterns/apply-directive.md
+
+  - Advanced:
+      - Customizing Tailwind Config: advanced/customizing-config.md
+      - Extending Themes: advanced/extending-themes.md
+      - Writing Plugins: advanced/writing-plugins.md
+      - Performance: advanced/performance.md
+
+  - Best Practices:
+      - Naming Conventions: best-practices/naming-conventions.md
+      - Structuring Utilities: best-practices/structuring-utilities.md
+      - Avoiding Repetition: best-practices/avoiding-repetition.md
+      - Accessibility: best-practices/accessibility.md
+
+  - Catch Points:
+      - Common Mistakes: catch-points/common-mistakes.md
+      - Debugging Class Conflicts: catch-points/debugging-class-conflicts.md
+      - Dynamic Class Names: catch-points/dynamic-class-names.md
+
+  - Troubleshooting:
+      - Styles Not Applying: troubleshooting/styles-not-applying.md
+      - PurgeCSS Issues: troubleshooting/purgecss-issues.md
+      - CSS Conflicts: troubleshooting/css-conflicts.md
+      - Responsive Debugging: troubleshooting/responsive-debugging.md
+
+  - Examples:
+      - Portfolio Example: examples/portfolio.md
+      - Dashboard Example: examples/dashboard.md
+      - Design System Example: examples/design-system.md
+
+  - Resources:
+      - Official Docs: resources/official-docs.md
+      - Community Plugins: resources/community-plugins.md
+      - Recommended Learning: resources/recommended-learning.md
+# site_name: Tailwind CSS Complete Guide
+# theme:
+#   name: material
+#   features:
+#     - navigation.expand
+#     - navigation.sections
+#     - navigation.tabs
+#     - content.code.copy
+#     - toc.integrate
+
+# nav:
+#   - Home: index.md
+
+#   - Introduction:
+#       - What is Tailwind CSS?: introduction/what-is-tailwind.md
+#       - Why Utility-First CSS?: introduction/why-utility-first.md
+#       - Comparison with Traditional Frameworks: introduction/comparison.md
+
+#   - Installation & Setup:
+#       - Installation: installation/installation.md
+#       - Configuration (tailwind.config.js): installation/config.md
+#       - PostCSS & PurgeCSS: installation/postcss-purgecss.md
+#       - Common Pitfalls: installation/pitfalls.md
+
+#   - Useful Extensions & Tools:
+#       - VSCode Extensions: extensions/vscode-extensions.md
+#       - Tailwind Plugins: extensions/plugins.md
+#       - Third-Party Libraries: extensions/third-party-libraries.md
+#       - Framework Integration: extensions/framework-integration.md
+
+#   - Core Concepts:
+#       - Utility Classes: core-concepts/utility-classes.md
+#       - Responsive Design: core-concepts/responsive-design.md
+#       - Hover & State Variants: core-concepts/variants.md
+#       - Dark Mode: core-concepts/dark-mode.md
+
+#   - Layout & Spacing:
+#       - Flexbox & Grid: layout-spacing/flexbox-grid.md
+#       - Spacing Utilities: layout-spacing/spacing.md
+#       - Container & Widths: layout-spacing/container-widths.md
+
+#   - Typography & Colors:
+#       - Typography Utilities: typography-colors/typography.md
+#       - Text Utilities: typography-colors/text-utilities.md
+#       - Color Palette: typography-colors/color-palette.md
+#       - Gradients & Backgrounds: typography-colors/gradients-backgrounds.md
+
+#   - Components & Patterns:
+#       - Building Components: components-patterns/building-components.md
+#       - Reusable Patterns: components-patterns/reusable-patterns.md
+#       - Using @apply: components-patterns/apply-directive.md
+
+#   - Advanced Topics:
+#       - Customizing Config: advanced/customizing-config.md
+#       - Extending Themes: advanced/extending-themes.md
+#       - Writing Plugins: advanced/writing-plugins.md
+#       - Performance Optimization: advanced/performance.md
+
+#   - Best Practices:
+#       - Naming Conventions: best-practices/naming-conventions.md
+#       - Structuring Classes: best-practices/structuring-utilities.md
+#       - Avoiding Repetition: best-practices/avoiding-repetition.md
+#       - Accessibility: best-practices/accessibility.md
+
+#   - Catch Points:
+#       - Common Mistakes: catch-points/common-mistakes.md
+#       - Debugging Conflicts: catch-points/debugging-class-conflicts.md
+#       - Dynamic Class Names: catch-points/dynamic-class-names.md
+
+#   - Troubleshooting:
+#       - Styles Not Applying: troubleshooting/styles-not-applying.md
+#       - PurgeCSS Issues: troubleshooting/purgecss-issues.md
+#       - CSS Framework Conflicts: troubleshooting/css-conflicts.md
+#       - Responsive Debugging: troubleshooting/responsive-debugging.md
+
+#   - End-to-End Examples:
+#       - Portfolio Layout: examples/portfolio.md
+#       - Dashboard UI: examples/dashboard.md
+#       - Design System Integration: examples/design-system.md
+
+#   - Resources:
+#       - Official Tailwind Docs: resources/official-docs.md
+#       - Community Plugins: resources/community-plugins.md
+#       - Recommended Learning: resources/recommended-learning.md

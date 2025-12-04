@@ -128,6 +128,8 @@ nav:
   #     # - Tutorials and Courses: resources/tutorials-and-courses.md
   #     # - Community and Forums: resources/community-and-forums.md
 
+  - Nav: index.md
+
 markdown_extensions:
   - codehilite
   - pymdownx.superfences

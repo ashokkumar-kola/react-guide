@@ -1,4 +1,10 @@
-:root {
+@import 'tailwindcss';
+
+.link {
+  @apply text-blue-600 hover:text-blue-800 underline-offset-2 hover:underline transition;
+}
+
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +71,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
