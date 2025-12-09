@@ -27,33 +27,30 @@ JSX is optional but widely used in React apps.
 
 ---
 
-## Embedding Expressions in JSX
+## ✅ Embedding Expressions in JSX
 
-`````
 You can embed JavaScript expressions inside JSX using `{}`.
 
-## Variables
+### Variables
 
-````jsx
+```jsx
 const name = 'Alice';
-<h1>Hello, {name}</h1>
+<h1>Hello, {name}</h1>;
+```
 
-
-## Expressions
+### Expressions
 
 ```jsx
 <p>2 + 2 = {2 + 2}</p>
-`````
+```
 
-````
-
-## Function Calls
+### Function Calls
 
 ```jsx
 <p>{getUserName()}</p>
 ```
 
-## JSX is an Expression
+### JSX is an Expression
 
 You can store JSX in a variable or return it from a function.
 
@@ -63,43 +60,37 @@ function greet(user) {
 }
 ```
 
-````
-
 ---
 
-# ✅ 3. `jsx-basics/jsx-attributes.md`
-
-````markdown
-# JSX Attributes
+## ✅ JSX Attributes
 
 JSX attributes look like HTML but follow JavaScript rules.
 
-## camelCase Attributes
+### camelCase Attributes
 
 ```jsx
 <input type="text" tabIndex={0} />
 ```
-````
 
-## className Instead of class
+### className Instead of class
 
 ```jsx
 <div className="container"></div>
 ```
 
-## Embedding JS Values
+### Embedding JS Values
 
 ```jsx
 <img src={profileUrl} alt={userName} />
 ```
 
-## Boolean Attributes
+### Boolean Attributes
 
 ```jsx
 <button disabled>Click</button>
 ```
 
-## Inline Styles
+### Inline Styles
 
 JSX uses objects for the `style` attribute:
 
@@ -113,7 +104,7 @@ JSX uses objects for the `style` attribute:
 
 - JSX can contain nested elements, components, or dynamic content.
 
-## Basic Nesting
+### Basic Nesting
 
 ```jsx
 <div>
@@ -122,7 +113,7 @@ JSX uses objects for the `style` attribute:
 </div>
 ```
 
-## Passing Children to Components
+### Passing Children to Components
 
 ```jsx
 function Card({ children }) {
@@ -134,7 +125,7 @@ function Card({ children }) {
 </Card>;
 ```
 
-## Rendering Lists
+### Rendering Lists
 
 Use `.map()` and include a `key`:
 
@@ -146,7 +137,7 @@ Use `.map()` and include a `key`:
 </ul>
 ```
 
-## JSX Comments
+### JSX Comments
 
 ```jsx
 {

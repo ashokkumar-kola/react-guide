@@ -1,6 +1,36 @@
 site_name: React Guide
+site_description: Complete react guide
+site_author: Ashok Kumar Kola
+
+repo_url: https://github.com/yourusername/react-guide
+repo_name: react-guide
+
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - toc.integrate
+    - content.code.annotate
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
 
 nav:
   - React Steup:
@@ -18,12 +48,12 @@ nav:
       - Troubleshooting: react-setup/troubleshooting.md
       # - FAQ: react-setup/faq.md
 
-  - JSX Basics:
-      - Introduction to JSX: jsx-basics/introduction.md
-      # - Embedding Expressions: jsx-basics/embedding-expressions.md
-      # - JSX Attributes: jsx-basics/jsx-attributes.md
-      # - Children in JSX: jsx-basics/children-in-jsx.md
-      # - JSX vs HTML: jsx-basics/jsx-vs-html.md
+  - Basics:
+      - JSX Basics: basics/jsx-basics.md
+      - Functional Components: basics/functional-components.md
+      - Props: basics/props.md
+      - Conditional Rendering: basics/conditional-rendering.md
+      - Composition: basics/composition.md
 
   # - Components and Props:
   #     # - Function Components: components-and-props/function-components.md
@@ -130,6 +160,26 @@ nav:
 
   - Nav: index.md
 
+plugins:
+  - search
+  - mkdocstrings
+
 markdown_extensions:
-  - codehilite
+  # - codehilite
+  # - pymdownx.superfences
+  - admonition
+  - codehilite:
+      guess_lang: false
+      css_class: codehilite
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.snippets
+  - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html

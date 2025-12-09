@@ -44,6 +44,17 @@ export default function HomePage() {
       </section>
 
       <section>
+        <h2 className="text-xl font-semibold">UI</h2>
+        <ul className="list-disc ml-6">
+          <li>
+            <Link to="/ui/masonry-gallery" className="link">
+              Masonry Gallery
+            </Link>
+          </li>
+        </ul>
+      </section>
+
+      <section>
         <h2 className="text-xl font-semibold">Animations</h2>
         <ul className="list-disc ml-6">
           <li>
@@ -51,6 +62,12 @@ export default function HomePage() {
               Edge Layers
             </Link>
           </li>
+
+          {/* <li>
+            <Link to="" className="link">
+              Edge Layers
+            </Link>
+          </li> */}
         </ul>
       </section>
     </div>
