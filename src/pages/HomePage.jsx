@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import EdgeLayers from '../animaions/EdgeLayers/EdgeLayers';
 
+// import ButtonPlayground from "@/components/Playground/ButtonPlayground";
+import ButtonPlayground from '../components/Playground/Playground';
+
 export default function HomePage() {
   return (
     <div className="p-6 space-y-6">
@@ -44,6 +47,17 @@ export default function HomePage() {
       </section>
 
       <section>
+        <h2 className="text-xl font-semibold">Templates</h2>
+        <ul className="list-disc ml-6">
+          <li>
+            <Link to="/templates/grid" className="link">
+              Grid Template
+            </Link>
+          </li>
+        </ul>
+      </section>
+
+      <section>
         <h2 className="text-xl font-semibold">UI</h2>
         <ul className="list-disc ml-6">
           <li>
@@ -70,6 +84,10 @@ export default function HomePage() {
           </li> */}
         </ul>
       </section>
+
+      {/* <section>
+        <ButtonPlayground />
+      </section> */}
     </div>
   );
 }

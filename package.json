@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^2.20.0",
+    "@codesandbox/sandpack-themes": "^2.0.21",
     "@tailwindcss/vite": "^4.1.17",
     "axios": "^1.12.2",
     "bootstrap": "^5.3.8",

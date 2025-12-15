@@ -4,6 +4,9 @@ import ButtonsPage from '../pages/ButtonsPage';
 import InputsPage from '../pages/InputsPage';
 import MasonryGalleryPage from '../ui/masonry_gallery/MasonryGalleryPage';
 
+// Templates
+import GridPage from '../templates/grid/GridPage';
+
 // Animations
 import { EdgeLayersPage } from '../animaions/EdgeLayers';
 
@@ -16,6 +19,10 @@ export default function AppRoutes() {
 
       <Route path="/animations/edge-layers" element={<EdgeLayersPage />} />
 
+      {/* Templates */}
+      <Route path="/templates/grid" element={<GridPage />} />
+
+      {/* UI Components */}
       <Route path="/ui/masonry-gallery" element={<MasonryGalleryPage />} />
     </Routes>
   );
